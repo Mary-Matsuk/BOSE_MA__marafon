@@ -400,8 +400,7 @@ body {
     .header,
     .menu {
         padding: 64px 72px 40px;
-        height: 800px;
-    }
+           }
 
     .header__title,
     .recommended__title,
@@ -456,8 +455,7 @@ body {
     .header,
     .menu {
         padding: 36px 20px 32px;
-        height: 500px;
-    }
+       }
 
     .header__title,
     .recommended__title,
