@@ -1,16 +1,112 @@
-/* #region page */
+/* #region Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-size: inherit;
+    font-weight: inherit; */
+}
+
+/* #endregion */
+
+/* #region page */
 html {
 
     scroll-behavior: smooth;
 }
-
+html,
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: #292929;
+    font-family: "Ubuntu", serif;
+    color: #292929 !important;
     font-size: 16px;
-    line-height: 140%;
+    font-weight: 400;
+
+}
+
+.icon {
+    color: #7D8579;
 }
 
 /* #endregion */
@@ -21,102 +117,277 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
-    height: 100vh;
-    padding: 64px 120px;
-    background-image: url(images/header-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .header__top {
     display: flex;
     justify-content: space-between;
-}
-
-.header__title {
-    margin-top: 40px;
-    margin-bottom: 0;
-    font-size: 48px;
-    line-height: 100%;
-    font-style: italic;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-}
-
-
-.loader {
-    height: 76px;
-    display: flex;
     align-items: center;
-    padding-left: 5px;
+    background: #2D3529;
+    padding: 10px 60px;
+    border-bottom: solid 10px #111512;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.loader .stroke {
-    display: block;
+.logo {
+    width: 160px;
+    /* margin-bottom: -23px; */
+    margin-right: auto;
+}
+
+.nav-phone {
+    color: #EBF3EF;
+    font-size: 22.5px;
+    text-decoration: none;
+    line-height: 80%;
+}
+
+.nav-phone span {
+    font-size: 54%;
+}
+
+form {
+    width: auto;
     position: relative;
-    background: #292929;
-    height: 100%;
-    width: 2.5px;
-    border-radius: 50px;
-    margin: 0 2px;
-    animation: animate 1.2s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+
 }
 
-@keyframes animate {
-    50% {
-        height: 20%;
+.form-control {
+    background: #EBF3EF;
+    /* background: transparent; */
+
+    width: 100%;
+    max-width: 432px;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 4px;
+
+}
+
+.form-control:focus {
+    outline: 1px #111512 auto;
+}
+
+form svg {
+    position: absolute;
+    right: 16px;
+}
+
+button {
+    height: 40px;
+    width: auto;
+    max-width: 432px;
+    margin: auto 0;
+    padding: 8px 16px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #EBF3EF;
+
+}
+
+.btn-primary {
+    background: #3C8C14;
+    background: linear-gradient(to bottom right, #3C8C14 0%, #2D3529 100%);
+    color: #7CE83F;
+    border: solid 1px #3C8C14;
+    transition: all 500ms ease 0s;
+}
+
+.btn-icon {
+    border-radius: 50%;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7D8579;
+}
+
+.btn-icon:hover,
+.btn-primary:hover {
+    background: #3C8C14;
+    background: linear-gradient(to bottom, #3C8C14 0%, #2D3529 100%);
+    border: solid 1px #3C8C14;
+    color: #EBF3EF;
+}
+
+.sky {
+    height: calc(100vh - 100px);
+    width: 100%;
+    /* background-image: url(https://images.unsplash.com/photo-1517639493569-5666a7b2f494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); */
+    background-image: url(images/sky.jpg);
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+
+
+}
+
+
+.highway {
+    height: 700px;
+    width: 500%;
+    display: block;
+    /* background-image: url(https://us.123rf.com/450wm/andreykuzmin/andreykuzmin1605/andreykuzmin160500066/56495798-asphalt-highway-road-marks-top-view.jpg?ver=6); */
+    background-image: url(images/highway.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-repeat: repeat-x;
+    animation: highway 5s linear infinite;
+    animation-play-state: 0;
+}
+
+@keyframes highway {
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+.city {
+    height: 900px;
+    width: 500%;
+    /* background-image: url(https://i.pinimg.com/originals/03/42/f0/0342f0d771ed35ab0cf65fe58e5293ff.png); */
+    background-image: url(images/city_.png);
+    position: absolute;
+    bottom: 145px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+    animation-play-state: 0;
+    /* filter: blur(1px); */
+}
+
+@keyframes city {
+    0% {
+        transform: translateX(0);
     }
 
     100% {
-        height: 100%;
+        transform: translateX(-2400px);
     }
 }
 
-.stroke:nth-child(1) {
-    animation-delay: 0s;
+
+
+
+h1 {
+    color: white;
+    background: #7CE83F;
+    background: linear-gradient(to bottom left, #7CE83F 0%, #2D3529 100%);
+    padding: 50px;
+    border-radius: 20px 20px 20px 0;
+    border-style: outset;
+    width: auto;
+    left: 29%;
+    bottom: 8%;
+    position: absolute;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 140%;
 }
 
-.stroke:nth-child(2) {
-    animation-delay: 0.2s;
+h1>br:nth-child(3) {
+    display: none;
 }
 
-.stroke:nth-child(3) {
-    animation-delay: 0.6s;
+.car {
+    width: 30%;
+    left: 15%;
+    bottom: 1%;
+    transform: translateX(-15%);
+    position: absolute;
+    z-index: 3;
 }
 
-.stroke:nth-child(4) {
-    animation-delay: 1s;
-
+.car-headlight {
+    z-index: 1;
+    bottom: 1%;
+    display: flex;
+    position: absolute;
+    animation: car-headlight 2s ease 0s infinite normal none !important;
 }
 
-.stroke:nth-child(5) {
-    animation-delay: 0.8s;
+@keyframes car-headlight {
+
+    0%,
+    50%,
+    100% {
+        opacity: 0.6;
+    }
+
+    25%,
+    75% {
+        opacity: 0.5;
+    }
 }
 
-.stroke:nth-child(6) {
-    animation-delay: 1.4s;
+.car img {
+    width: 100%;
+    animation: car 1s linear infinite;
 }
 
-.stroke:nth-child(7) {
-    animation-delay: 1.6s;
+@keyframes car {
+    100% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(-1px);
+    }
+
+    0% {
+        transform: translateY(-1px);
+    }
 }
 
-.stroke:nth-child(8) {
-    animation-delay: 0.8s;
+.wheel {
+    position: absolute;
+    /* z-index: 3; */
+    width: 55.5%;
+    justify-content: space-between;
+    display: flex;
+    left: 26%;
+    bottom: 14%;
+    transform: translateX(-17.5%);
+    z-index: 2;
 }
 
-.stroke:nth-child(9) {
-    animation-delay: 0.6s;
+.wheel img {
+    width: 19%;
+    height: auto;
+    animation: wheel 1s linear infinite;
 }
 
-.stroke:nth-child(10) {
-    animation-delay: 0.2s;
+.back-wheel {
+    /* left: -49px; */
+    /* position: absolute; */
 }
 
-.stroke:nth-child(11) {
-    animation-delay: 0s;
+.front-wheel {
+    /* left: 341px; */
+    /* position: absolute; */
+}
+
+@keyframes wheel {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* #endregion */
@@ -124,26 +395,15 @@ body {
 
 /* #region menu */
 .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    transform: translateX(-100%);
-    transition: transform 500ms;
-    box-sizing: border-box;
-    height: 100vh;
-    padding: 64px 120px;
-    background: #E8EFF9;
+    
 }
 
 .menu:target {
-    transform: translateX(-0%);
+   
 }
 
 .menu__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 64px;
+   
 }
 
 /* #endregion */
@@ -151,19 +411,19 @@ body {
 
 /* #region nav */
 .nav {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 32px; */
 }
 
 .nav__link {
-    color: #292929;
+    /* color: #292929;
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
     line-height: 22px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2px; */
 }
 
 .nav__link:hover {
@@ -175,304 +435,13 @@ body {
 
 /* #region main */
 .main {
-    padding: 120px;
-    background-color: white;
+    /* padding: 120px;
+    background-color: white; */
 }
 
 /* #endregion */
 
 
-/* #region recommended */
-.recommended {
-    margin-bottom: 120px;
-}
-
-.recommended__title {
-    margin-top: 0;
-    margin-bottom: 64px;
-    font-size: 48px;
-    line-height: 100%;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: -1.5px;
-}
-
-.recommended__products {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
+/* #region */
 
 /* #endregion */
-
-
-/* #region product */
-.product {
-    flex-basis: 324px;
-}
-
-.product__photo {
-    width: 100%;
-    margin-bottom: 32px;
-}
-
-.product__title {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 140%;
-}
-
-.product__category {
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.product__price {
-    margin: 0;
-    font-weight: bold;
-}
-
-/* #endregion */
-
-
-/* #region categories */
-.categories {
-    max-width: 1020px;
-    margin: 0 auto;
-    margin-bottom: 120px;
-}
-
-.categories__title {
-    margin-top: 0;
-    margin-bottom: 64px;
-    font-size: 48px;
-    line-height: 100%;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: -1.5px;
-}
-
-/* #endregion */
-
-
-/* #region category */
-.category {
-    margin-bottom: 64px;
-}
-
-.category__photos {
-    display: flex;
-    gap: 3%;
-    margin-bottom: 16px;
-    overflow-x: hidden;
-}
-
-.category__title {
-    /* font-size: 24px; */
-    margin: 0;
-}
-
-/* #endregion */
-
-
-/* #region photo */
-.photo-wide {
-    width: 65%;
-}
-
-.photo-square {
-    width: 32%;
-}
-
-/* ################################## */
-
-.Headphones-earbuds-wide {
-    background-image: url(images/categories/Headphones-earbuds-wide.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.Headphones-earbuds-square {
-    background-image: url(images/categories/Headphones-earbuds-square.png);
-}
-
-.Speakers-wide {
-    background-image: url(images/categories/Speakers-wide.png);
-}
-
-.Speakers-square {
-    background-image: url(images/categories/Speakers-square.png);
-}
-
-.Audio-sunglasses-square {
-    background-image: url(images/categories/Audio-sunglasses-square.png);
-}
-
-.Audio-sunglasses-wide {
-    background-image: url(images/categories/Audio-sunglasses-wide.png);
-}
-
-.Headphones-earbuds-wide,
-.Audio-sunglasses-wide,
-.Speakers-wide,
-.Headphones-earbuds-square,
-.Speakers-square,
-.Audio-sunglasses-square {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 320px;
-}
-
-/* #endregion */
-
-
-/* #region how-to-buy */
-.how-to-buy {
-    max-width: 1020px;
-    margin: 0 auto;
-    display: flex;
-    gap: 24px;
-}
-
-.how-to-buy__title {
-    flex-basis: 50%;
-    margin-top: 0;
-    margin-bottom: 64px;
-    font-size: 48px;
-    line-height: 100%;
-    font-weight: bold;
-    letter-spacing: -1.5px;
-}
-
-.how-to-buy__content {
-    flex-basis: 50%;
-}
-
-.how-to-buy__benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-/* #endregion */
-
-
-/* #region footer */
-.footer {
-    position: sticky;
-    bottom: 0;
-    z-index: -1;
-    height: 460px;
-    background-image: url(images/footer-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* #endregion */
-
-
-@media (max-width: 1024px) {
-    .Headphones-earbuds-wide,
-.Audio-sunglasses-wide,
-.Speakers-wide,
-.Headphones-earbuds-square,
-.Speakers-square,
-.Audio-sunglasses-square {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 253px;
-}
-}
-
-@media (max-width: 744px) {
-
-    .header,
-    .menu {
-        padding: 64px 72px 40px;
-           }
-
-    .header__title,
-    .recommended__title,
-    .categories__title,
-    .how-to-buy__title {
-        font-size: 40px;
-    }
-
-    .main {
-        padding: 72px 72px 120px;
-    }
-
-    .recommended__products {
-        display: block;
-    }
-
-    .Headphones-earbuds-wide,
-    .Audio-sunglasses-wide,
-    .Speakers-wide,
-    .Headphones-earbuds-square,
-    .Speakers-square,
-    .Audio-sunglasses-square {
-        height: 187px;
-    }
-}
-
-
-@media (max-width: 550px) {
-    .how-to-buy {
-        display: block;
-    }
-    .Headphones-earbuds-wide,
-    .Audio-sunglasses-wide,
-    .Speakers-wide,
-    .Headphones-earbuds-square,
-    .Speakers-square,
-    .Audio-sunglasses-square {
-        height: 130px;
-    }
-    .photo-wide {
-        width: 50%;
-    }
-
-    .photo-square {
-        width: 50%;
-    }
-}
-
-
-@media (max-width: 375px) {
-
-    .header,
-    .menu {
-        padding: 36px 20px 32px;
-       }
-
-    .header__title,
-    .recommended__title,
-    .categories__title,
-    .how-to-buy__title {
-        font-size: 32px;
-    }
-
-    .main {
-        padding: 20px 20px 120px;
-    }
-
-    .category {
-        margin-bottom: 40px;
-    }
-
-       .how-to-buy__title {
-        margin-bottom: 32px;
-    }
-}

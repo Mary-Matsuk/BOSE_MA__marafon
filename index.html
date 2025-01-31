@@ -11,171 +11,131 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- #endregion -->
 
 <body id="home">
+
     <header class="header">
-        <div class="header__top">
-            <img src="images/logo.png" alt="Bose logo">
-            <a href="#menu">
-                <img src="images/icons/Icon-Burger-menu.png" alt="Burger menu">
+
+        <div class="header__top container">
+            <a class="logo" href="#home">
+                <img src="images/logo.svg" alt="Bose logo">
             </a>
-        </div>
+            <form class="form" crole="search">
+                <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.83333 3C6.05939 3 3 6.05939 3 9.83333C3 13.6073 6.05939 16.6667 9.83333 16.6667C13.6073 16.6667 16.6667 13.6073 16.6667 9.83333C16.6667 6.05939 13.6073 3 9.83333 3ZM1.5 9.83333C1.5 5.23096 5.23096 1.5 9.83333 1.5C14.4357 1.5 18.1667 5.23096 18.1667 9.83333C18.1667 14.4357 14.4357 18.1667 9.83333 18.1667C5.23096 18.1667 1.5 14.4357 1.5 9.83333ZM17.428 17.428C17.7209 17.1351 18.1958 17.1351 18.4887 17.428L22.2803 21.2197C22.5732 21.5126 22.5732 21.9874 22.2803 22.2803C21.9874 22.5732 21.5126 22.5732 21.2197 22.2803L17.428 18.4887C17.1351 18.1958 17.1351 17.7209 17.428 17.428Z" />
+                </svg>
+
+            </form>
+            <a class="nav-phone" href="tel:0800 202 105" title="phone"> 0800 202 105<br>
+                <span> Безкоштовно по Україні </span>
+            </a>
+            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.22703 4.22703C8.4929 2.96116 10.2098 2.25 12 2.25C13.7902 2.25 15.5071 2.96116 16.773 4.22703C18.0388 5.4929 18.75 7.20979 18.75 9V9.25H19C19.7293 9.25 20.4288 9.53973 20.9445 10.0555C21.4603 10.5712 21.75 11.2707 21.75 12V14C21.75 14.7293 21.4603 15.4288 20.9445 15.9445C20.4288 16.4603 19.7293 16.75 19 16.75H18.7021C18.6467 17.1335 18.5437 17.5094 18.3947 17.869C18.1602 18.4352 17.8164 18.9497 17.3831 19.3831C16.9497 19.8164 16.4352 20.1602 15.869 20.3947C15.3028 20.6293 14.6959 20.75 14.083 20.75H13.5816C13.3007 21.3412 12.6981 21.75 12 21.75H11C10.0335 21.75 9.25 20.9665 9.25 20V19C9.25 18.0335 10.0335 17.25 11 17.25H12C12.9665 17.25 13.75 18.0335 13.75 19V19.25H14.083C14.4989 19.25 14.9107 19.1681 15.295 19.0089C15.6792 18.8498 16.0283 18.6165 16.3224 18.3224C16.6165 18.0283 16.8498 17.6792 17.0089 17.295C17.1681 16.9107 17.25 16.4989 17.25 16.083V9C17.25 7.60761 16.6969 6.27226 15.7123 5.28769C14.7277 4.30312 13.3924 3.75 12 3.75C10.6076 3.75 9.27226 4.30312 8.28769 5.28769C7.30312 6.27226 6.75 7.60761 6.75 9V16C6.75 16.4142 6.41421 16.75 6 16.75H5C4.27065 16.75 3.57118 16.4603 3.05546 15.9445C2.53973 15.4288 2.25 14.7293 2.25 14V12C2.25 11.2707 2.53973 10.5712 3.05546 10.0555C3.57118 9.53973 4.27065 9.25 5 9.25H5.25V9C5.25 7.20979 5.96116 5.4929 7.22703 4.22703ZM5.25 10.75H5C4.66848 10.75 4.35054 10.8817 4.11612 11.1161C3.8817 11.3505 3.75 11.6685 3.75 12V14C3.75 14.3315 3.8817 14.6495 4.11612 14.8839C4.35054 15.1183 4.66848 15.25 5 15.25H5.25V10.75ZM18.75 15.25H19C19.3315 15.25 19.6495 15.1183 19.8839 14.8839C20.1183 14.6495 20.25 14.3315 20.25 14V12C20.25 11.6685 20.1183 11.3505 19.8839 11.1161C19.6495 10.8817 19.3315 10.75 19 10.75H18.75V15.25ZM11.9131 5.25398C12.4074 5.24237 12.8992 5.32863 13.36 5.50781C13.8209 5.68698 14.2418 5.95554 14.5985 6.29801C14.8972 6.5849 14.9069 7.05968 14.62 7.35845C14.3331 7.65723 13.8583 7.66687 13.5595 7.37999C13.3455 7.1745 13.093 7.01337 12.8165 6.90586C12.54 6.79836 12.2449 6.7466 11.9483 6.75357C11.6517 6.76054 11.3594 6.8261 11.0883 6.94648C10.8171 7.06686 10.5724 7.23968 10.3683 7.45499C10.0833 7.75559 9.60862 7.76827 9.30801 7.4833C9.00741 7.19832 8.99473 6.72362 9.27971 6.42301C9.61989 6.06416 10.0277 5.77613 10.4796 5.5755C10.9316 5.37487 11.4187 5.2656 11.9131 5.25398ZM11 18.75C10.8619 18.75 10.75 18.8619 10.75 19V20C10.75 20.1381 10.8619 20.25 11 20.25H12C12.1381 20.25 12.25 20.1381 12.25 20V19C12.25 18.8619 12.1381 18.75 12 18.75H11Z" />
+                </svg>
+
+
+
+
+
+
+
+
+                Замовити дзвінок
+            </button>
+
+            <button class="btn-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 3C8.85 3 3 8.85 3 16C3 23.15 8.85 29 16 29C23.15 29 29 23.15 29 16C29 8.85 23.15 3 16 3ZM24.45 11.6125C25.1 11.6125 25.5875 12.1 26.2375 12.1C25.75 12.75 23.6375 12.75 22.9875 11.9375C23.475 11.775 23.8 11.6125 24.45 11.6125ZM4.625 16C4.625 15.35 4.625 14.7 4.7875 13.8875C4.95 13.8875 5.1125 14.05 5.275 14.05C5.275 14.05 5.4375 14.2125 5.4375 14.375C5.4375 14.8625 5.925 15.1875 6.25 15.1875C7.55 15.35 8.0375 16.4875 9.175 16.8125C9.5 16.975 9.3375 17.3 9.175 17.625C8.2 18.925 9.0125 19.9 9.825 20.7125C10.6375 21.3625 10.6375 22.0125 10.8 22.9875C10.8 24.125 10.9625 25.425 11.45 26.5625C7.3875 24.6125 4.625 20.7125 4.625 16ZM16 27.375C14.8625 27.375 13.5625 27.2125 12.5875 26.8875C12.425 26.5625 12.425 26.2375 12.5875 25.9125C13.2375 24.6125 13.8875 23.475 14.7 22.3375C15.025 22.0125 15.35 21.6875 15.35 21.2C15.35 20.875 15.5125 20.3875 15.675 20.0625C16.1625 19.25 16 18.7625 15.35 18.6C14.05 18.275 13.4 17.1375 12.425 16.65C11.45 16.1625 10.475 15.8375 9.6625 16.325C9.3375 16.4875 8.85 16.65 8.85 16.1625C8.85 15.5125 8.0375 15.025 8.2 14.375C8.0375 14.375 7.875 14.375 7.7125 14.5375C7.55 14.7 7.3875 14.8625 7.0625 14.7C6.7375 14.375 6.9 14.05 6.9 13.725C7.0625 13.4 7.225 13.2375 7.55 13.075C8.2 12.9125 8.85 12.9125 9.175 13.725C9.6625 12.2625 10.6375 11.45 11.6125 10.8C11.6125 10.8 12.9125 9.6625 13.075 9.6625C13.2375 9.6625 13.4 9.9875 13.725 10.15C14.05 10.15 14.2125 10.15 14.2125 9.825C14.375 9.0125 13.8875 8.0375 13.2375 7.875C13.2375 7.7125 13.4 7.7125 13.4 7.7125C13.8875 7.55 14.5375 7.225 14.375 6.7375C14.375 6.0875 13.725 5.7625 13.075 5.7625C12.75 5.7625 12.425 5.7625 12.1 5.925C11.45 6.25 10.6375 6.575 9.6625 6.575C11.45 5.275 13.725 4.625 16 4.625C16.4875 4.625 16.8125 4.625 17.3 4.625C16.325 4.7875 15.35 5.1125 14.7 5.4375C15.675 5.6 15.8375 6.0875 15.5125 6.9C15.35 7.225 15.5125 7.55 15.8375 7.7125C16.1625 7.875 16.4875 7.875 16.65 7.55C16.975 7.0625 17.625 6.9 18.1125 6.7375C18.7625 6.575 19.25 6.25 19.7375 5.6C19.7375 5.4375 19.9 5.4375 20.0625 5.275C21.0375 5.6 22.0125 6.25 22.9875 6.9C22.825 6.9 22.825 7.0625 22.6625 7.0625C22.3375 7.3875 21.85 7.55 22.3375 8.2C22.5 8.525 22.3375 8.6875 22.175 8.85C21.85 9.0125 21.6875 8.85 21.525 8.6875C21.3625 8.525 21.3625 8.2 20.875 8.2C20.7125 8.525 20.225 8.6875 20.225 9.175C21.0375 9.175 20.875 9.825 21.0375 10.3125C20.0625 10.475 19.7375 10.9625 20.225 11.775C20.3875 12.1 20.0625 12.2625 19.9 12.425C19.25 13.4 18.6 14.05 18.6 15.1875C18.6 16.325 19.4125 17.4625 20.7125 17.3C22.175 17.1375 22.175 17.1375 22.6625 18.4375C22.6625 18.6 22.825 18.7625 22.825 18.925C22.9875 19.25 23.15 19.575 22.9875 19.9C22.5 21.2 23.15 22.175 23.6375 23.15C23.8 23.475 23.9625 23.6375 24.125 23.8C22.0125 26.075 19.25 27.375 16 27.375Z" />
+                </svg>
+            </button>
+
+            <button class="btn-icon">
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.2263 5C10.1512 5 5.22632 9.92487 5.22632 16C5.22632 19.3243 6.70098 22.3042 9.03183 24.3213C9.39292 23.4107 9.96374 22.5894 10.707 21.9287C11.8601 20.9038 13.3484 20.3363 14.8911 20.3333L14.893 20.3333L17.5616 20.3333C19.1043 20.3363 20.5926 20.9038 21.7456 21.9287C22.4889 22.5894 23.0597 23.4107 23.4208 24.3213C25.7517 22.3042 27.2263 19.3243 27.2263 16C27.2263 9.92487 22.3015 5 16.2263 5ZM17.5402 28.9344C24.1029 28.2757 29.2263 22.7362 29.2263 16C29.2263 8.8203 23.406 3 16.2263 3C9.04662 3 3.22632 8.8203 3.22632 16C3.22632 22.7362 8.34976 28.2757 14.9124 28.9344C15.3476 28.9784 15.7861 29.0004 16.2263 29M16.2252 27C16.2256 27 16.226 27 16.2263 27C16.2267 27 16.2271 27 16.2274 27C16.6704 27 17.1073 26.9737 17.5366 26.9228C19.0081 26.7469 20.431 26.2733 21.7174 25.5283C21.4998 24.7191 21.0498 23.9861 20.4169 23.4235C19.6292 22.7233 18.6126 22.3356 17.5587 22.3333C17.5584 22.3333 17.559 22.3333 17.5587 22.3333L14.8949 22.3333C14.8946 22.3333 14.8952 22.3333 14.8949 22.3333C13.841 22.3356 12.8234 22.7233 12.0357 23.4235C11.4028 23.9861 10.9529 24.7191 10.7352 25.5283C12.0216 26.2733 13.4446 26.7469 14.9161 26.9228C15.3454 26.9737 15.7822 27 16.2252 27ZM16.2263 29C16.6665 29.0004 17.105 28.9784 17.5402 28.9344Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.2263 18C18.9877 18 21.2263 15.7614 21.2263 13C21.2263 10.2386 18.9877 8 16.2263 8C13.4649 8 11.2263 10.2386 11.2263 13C11.2263 15.7614 13.4649 18 16.2263 18ZM22.8277 26.016C20.8703 27.3124 18.574 28.0026 16.2263 28C13.8786 28.0026 11.5823 27.3124 9.62498 26.016C9.77968 24.7268 10.4009 23.5388 11.3714 22.6761C12.3419 21.8134 13.5945 21.3358 14.893 21.3333H17.5597C18.8581 21.3358 20.1108 21.8134 21.0813 22.6761C22.0518 23.5388 22.673 24.7268 22.8277 26.016Z" />
+                </svg>
+            </button>
+
+            <button class="btn-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 16C8 16.5523 8.44772 17 9 17H25C25.5523 17 26 16.5523 26 16C26 15.4477 25.5523 15 25 15H9C8.44772 15 8 15.4477 8 16Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4 24C4 24.5523 4.44772 25 5 25H25C25.5523 25 26 24.5523 26 24C26 23.4477 25.5523 23 25 23H5C4.44772 23 4 23.4477 4 24Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4 8C4 8.55228 4.44772 9 5 9H25C25.5523 9 26 8.55228 26 8C26 7.44772 25.5523 7 25 7H5C4.44772 7 4 7.44772 4 8Z" />
+                </svg>
+            </button>
+            </div>
 
         <div class="header__bottom">
-            <div class="loader">
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-
+            <div class="sky">
+                <div class="highway"></div>
+                <div class="city"></div>
+                <div class="car">
+                    <img class="car-headlight" src="images/new-sports-car.png">
+                    <img src="images/new-sports-car_.png">
+                    <div class="wheel">
+                        <img src="https://pngimg.com/uploads/car_wheel/car_wheel_PNG23306.png" class="back-wheel">
+                        <img src="https://pngimg.com/uploads/car_wheel/car_wheel_PNG23306.png" class="front-wheel">
+                    </div>
+                </div>
+                <h1>Авто з США та Канади доступні для покупки в Україні <br>
+                    Повний каталог авто<br>
+                    з прорахунком
+                    розмитнення<br> та вартості</h1>
             </div>
-            <!-- <img src="images/Sound waves.png" alt="Sound waves"> -->
-            <h1 class="header__title">
-                The world shades.
-                <br>
-                Your music shines.
-            </h1>
         </div>
     </header>
-
-    <div class="menu" id="menu">
-        <div class="menu__top">
-            <img src="images/logo.png" alt="Bose logo">
-            <a href="#home">
-                <img src="images/icons/Icon-Close.png" alt="Close">
-            </a>
-        </div>
-
-        <nav class="nav">
-            <a href="#home" class="nav__link">Home</a>
-            <a href="#recommended" class="nav__link">Recommended</a>
-            <a href="#categories" class="nav__link">Categories</a>
-            <a href="#how-to-buy" class="nav__link">How to buy</a>
-        </nav>
-    </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li>
+                <a class="nav__link" href="">Каталог </а>
+            </li>
+            <li>
+                <a class="nav__link" href="">Послуги</а>
+            </li>
+            <li>
+                <a class="nav__link" href=""> Пошук ТЗ</а>
+            </li>
+            <li>
+                <a class="nav__link" href="">Розшифровка VIN</а>
+            </li>
+            <li>
+                <a class="nav__link" href="">Етапи покупки</а>
+            </li>
+            <li>
+                <a class="nav__link" href=""> Гарантії </а>
+            </li>
+            <li>
+                <a class="nav__link" href="">Контакти</а>
+            </li>
+        </ul>
+    </nav>
+   
 
 
     <main class="main">
-        <section class="recommended" id="recommended">
-            <h2 class="recommended__title">Recommended</h2>
-
-            <div class="recommended__products">
-                <article class="product">
-                    <img src="images/products/Bose portable Smart speaker.png" alt="Bose portable Smart speaker"
-                        class="product__photo">
-                    <h3 class="product__title">Bose portable Smart speaker</h3>
-                    <p class="product__category">Smart home</p>
-                    <p class="product__price">$ 399.00</p>
-                </article>
-
-                <article class="product">
-                    <img src="images/products/SoundLink Flex Bluetooth speaker.png"
-                        alt="SoundLink Flex Bluetooth speaker" class="product__photo">
-                    <h3 class="product__title">SoundLink Flex Bluetooth speaker</h3>
-                    <p class="product__category">Portable bluetooth</p>
-                    <p class="product__price">$ 149.00</p>
-                </article>
-
-                <article class="product">
-                    <img src="images/products/SoundLink Color Bluetooth speaker II.png"
-                        alt="SoundLink Color Bluetooth speaker II" class="product__photo">
-                    <h3 class="product__title">SoundLink Color Bluetooth speaker&nbsp;II </h3>
-                    <p class="product__category">Portable bluetooth</p>
-                    <p class="product__price">$ 129.00</p>
-                </article>
-            </div>
-        </section>
 
 
-        <section class="categories" id="categories">
-            <h2 class="categories__title">Browse Bose<br>products by category</h2>
-
-            <article class="category">
-                <div class="category__photos">
-                    <div class="Headphones-earbuds-wide photo-wide"></div>
-                    <div class="Headphones-earbuds-square photo-square"></div>
-                </div>
-                <h3 class="category__title">Headphones & earbuds</h3>
-            </article>
-
-            <article class="category">
-                <div class="category__photos">
-                    <div class="Speakers-wide photo-wide"></div>
-                    <div class="Speakers-square photo-square"></div>
-                </div>
-                <h3 class="category__title">Speakers</h3>
-            </article>
-
-            <article class="category">
-                <div class="category__photos">
-                    <div class="Audio-sunglasses-square photo-square "></div>
-                    <div class="Audio-sunglasses-wide photo-wide"></div>
-                </div>
-                <h3 class="category__title">Audio sunglasses</h3>
-            </article>
-        </section>
 
 
-        <!-- <section class="categories" id="categories">
-            <h2 class="categories__title">Browse Bose<br>products by category</h2>
-
-            <article class="category">
-                <div class="category__photos">
-                    <img src="images/categories/Headphones-earbuds-wide.png" alt="Headphones & earbuds"
-                        class="photo-wide">
-                    <img src="images/categories/Headphones-earbuds-square.png" alt="Headphones & earbuds"
-                        class="photo-square">
-                </div>
-                <h3 class="category__title">Headphones & earbuds</h3>
-            </article>
-
-            <article class="category">
-                <div class="category__photos">
-                    <img src="images/categories/Speakers-wide.png" alt="Speakers" class="photo-wide">
-                    <img src="images/categories/Speakers-square.png" alt="Speakers" class="photo-square">
-                </div>
-                <h3 class="category__title">Speakers</h3>
-            </article>
-
-            <article class="category">
-                <div class="category__photos">
-                    <img src="images/categories/Audio-sunglasses-square.png" alt="Audio sunglasses"
-                        class="photo-square">
-                    <img src="images/categories/Audio-sunglasses-wide.png" alt="Audio sunglasses" class="photo-wide">
-                </div>
-                <h3 class="category__title">Audio sunglasses</h3>
-            </article>
-        </section> -->
-
-
-        <section class="how-to-buy" id="how-to-buy">
-            <h2 class="how-to-buy__title">Why buy direct<br> from Bose</h2>
-            <div class="how-to-buy__content">
-                <ul class="how-to-buy__benefits">
-                    <li>Free 2-day shipping and returns</li>
-                    <li>90-day risk-free trial</li>
-                    <li>World class customer service</li>
-                    <li>My Bose account management</li>
-                </ul>
-                <p class="how-to-buy__description">
-                    A great product is more than what’s in the box. It’s a promise of premium performance, world-class
-                    support, and everything you expect from a trusted brand. It’s just one of many reasons why you’ll
-                    shop with confidence on Bose.com.
-                </p>
-            </div>
-        </section>
     </main>
 
     <footer class="footer"></footer>
